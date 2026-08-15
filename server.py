@@ -23,7 +23,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.request import urlopen, Request
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer as FastMCP
 
 mcp = FastMCP("conan-agent")
 
