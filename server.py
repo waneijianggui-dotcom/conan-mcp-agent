@@ -113,6 +113,18 @@ def get_script_templates() -> str:
 
 
 @mcp.tool()
+def get_reference_sites() -> str:
+    """
+    ネタ探し・裏取りに使える参考サイト一覧を返す（謎解き型/裏話暴露型/名前の由来系、それぞれに向くサイトの使い分け）。
+    台本の材料を深掘りする前に参照する。
+    """
+    path = BASE_DIR / "templates" / "reference_sites.md"
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+    return "reference_sites.md が見つかりません。"
+
+
+@mcp.tool()
 def save_topic_log(date: str, content: str) -> str:
     """
     その日見つけたネタ・台本案をリポジトリ内に保存する（GitHub Actions経由の自動蓄積用）。

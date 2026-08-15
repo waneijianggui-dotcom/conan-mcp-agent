@@ -15,6 +15,8 @@ QUERIES = [
     "名探偵コナン 新刊",
     "名探偵コナン 声優",
     "名探偵コナン 映画",
+    "名探偵コナン site:conan-zukai.com",
+    "名探偵コナン site:animatetimes.com",
 ]
 
 BASE_DIR = Path(__file__).resolve().parent.parent
